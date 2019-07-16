@@ -1,0 +1,26 @@
+page-bpjs{
+    .toolbar-background{
+        background-color: #36884D;
+    }
+    .ion-card{
+        width: 90%;
+        display: block;
+        margin: 7% auto;
+        border-radius: 5px;
+        padding: 1%;
+    }
+    .ion-button{
+        border-radius: 5px;
+    }
+    .ion-input{
+        input{
+            text-align: right;
+        }
+    }
+    .text{
+        font-size: 12pt;
+    }
+    .back-button-icon-md{
+        color: white;
+    }
+}

@@ -1,0 +1,38 @@
+page-account{
+    .back-button-icon-md {
+        color: white;
+    
+    }
+    .toolbar-background{
+        background-color: #36884D;
+    }
+    .ion-content{
+        background-color: transparent;
+        background-size: 70% 40%;
+    }
+    $num-of-tabs : 3;
+    @mixin tabs {
+        @for $i from 1 through $num-of-tabs {
+            &:nth-of-type(#{$i}){
+                &.segment-activated {
+                    ~ .slide {
+                        left: cals((100% / #{$num-of-tabs}) * #{$i - 1});
+                    }
+                }
+            }
+        }
+    }
+    .segment-button{
+        border: 0 !important;
+        @include tabs;
+    }
+    .slide {
+        background: dodgerblue;
+        width: cals(100% / #{$num-of-tabs});
+        height: 4px;
+        position: absolute;
+        left: 0;
+        top: cals(100% - 4px);
+        transition: left 0.3s ease-out;
+    }
+}

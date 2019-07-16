@@ -1,0 +1,86 @@
+<ion-header no-shadow no-border>
+  <ion-navbar>
+    <ion-button >
+    <ion-icon name="menu" color="light"></ion-icon>
+  </ion-button>
+    <ion-title><font style="color : white">HOME</font></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+<div class="titles2">
+  <ion-title><font class="says">{{ucap}},</font>
+  <br>
+  <font class="name">{{name}}</font></ion-title>
+  <ion-card class="menu">
+    <ion-grid no-padding>
+      <ion-row justify-content-center>
+      <ion-col col-4 (click)="bukaRekening()">
+          <div class="square"><ion-icon name="card" color="ijo"></ion-icon></div>
+            <div>REKENING</div>
+      </ion-col>
+      <ion-col col-4 (click)="bukaPrabayar()">
+        <div class="square"><ion-icon name="phone-portrait" color="ijo"></ion-icon></div>
+        <div>PRABAYAR</div>
+      </ion-col>
+      <ion-col col-4 (click)="bukaPascabayar()">
+        <div class="square"><ion-icon name="ios-call" color="ijo"></ion-icon></div>
+        <div>PASCA BAYAR</div>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col col-4 (click)="bayarBPJS()">
+        <div class="square"><ion-icon name="add-circle" color="ijo"></ion-icon></div>
+        <div>BPJS</div>
+      </ion-col>
+      <ion-col col-4 (click)="bayarRiwayat()">
+      <div class="square"><ion-icon name="ios-time" color="ijo"></ion-icon></div>
+      <div>RIWAYAT</div>
+    </ion-col>
+    <ion-col col-4 (click)="bukaSettings()">
+      <div class="square"><ion-icon name="settings" color="ijo"></ion-icon></div>
+      <div>SETTINGS</div>
+    </ion-col>
+  </ion-row>
+    </ion-grid>
+  </ion-card>
+</div>
+<hr>
+<div class="promotion">
+  <font class="stylesubJudul">
+  BROSUR
+  </font>
+  <ion-scroll scrollX="true" direction="x" class="scroll-promotion">
+  <ion-card *ngFor="let promotion of dataPromo" class="promotion-card" text-wrap> 
+  <ion-grid no-padding>
+  <ion-row>
+    <img [src]="promotion.Url[0]" class="promotion-img">
+    <div class="card-title">{{va.promotion}}</div>
+  </ion-row>
+  </ion-grid>
+  </ion-card>
+  </ion-scroll>
+</div>
+<div class="news">
+  <font class="">BERITA</font>
+  <ion-scroll scrollX="true" direction="x" class="scroll-news">
+    <ion-card *ngFor="let news of dataNews" class="news-card" text-wrap>
+      <ion-grid no-padding>
+        <ion-row>
+         <ion-col>
+           <img [src]="berita.Url[0]" class="news-img">
+         </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="heading-news">{{news.News}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="news-content">{{news.Deskripsi}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-scroll>
+</div>
+</ion-content>

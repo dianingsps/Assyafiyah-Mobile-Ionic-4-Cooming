@@ -1,0 +1,21 @@
+<ion-header no-shadow no-border>
+  <ion-navbar>
+    <ion-button >
+    <ion-icon name="menu" color="light"></ion-icon>
+  </ion-button>
+    <ion-title><font style="color : white">Account</font></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+<super-tabs id="maintab" toolbarColor ="light" toolbarColor="ijo"
+indicatorColor="yellow" badgeColor="yellow" [config]="{ sideMenu: 'left' }" (tabsSelect)="onTabSelect($event)">
+<super-tab [swipeBackendEnabled]="false" [root]="page1" [title]="showTitle? 'Check Saldo' : ''" [icon]="showIcon? 'Information-circle' : ''" 
+id="page1">
+</super-tab>
+<super-tab [root]="page2" [title]="showTitle? 'Mutasi' : ''" [icon]="showIcon? 'list-box' : ''" id="page2">
+  </super-tab>
+</super-tab [root]="page3" [title]="showTitle? 'Kirim Uang' : ''" [icon]="showIcon? 'share-alt' : ''" id="page3">
+<super-tab>
+</super-tabs>
+</ion-content>

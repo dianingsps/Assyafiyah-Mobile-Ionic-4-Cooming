@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background: url('assets/bg-btm.png')no-repeat; background-position-x: 10%; background-position: bottom; height: 100%; width: 100%;">
+<img src="assets/logo.png" class="icon">
+<ion-grid no-padding>
+<ion-row>
+<div class="top">
+  <div class="name">{{cNasabahName}}</div>
+  <div class="text">Entrance Your Phone Number for The Next Step</div>
+</div>
+</ion-row>
+<ion-row class="form">
+  <div class="label">Number Phone</div>
+</ion-row>
+<ion-row class="form>">
+  <ion-input type="password" maxlength="6" [(ngModel)]="cPassword" required></ion-input>
+</ion-row>
+<ion-row>
+  <ion-button class="button-go" (click)="signIn()" type="submit">SIGNIN</ion-button>
+</ion-row>
+</ion-grid>
+</ion-content>

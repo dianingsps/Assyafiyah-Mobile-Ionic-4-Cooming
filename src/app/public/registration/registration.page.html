@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list insert>
+      <ion-item>
+          <ion-label>
+            USERNAME
+          </ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+        <ion-item>
+            <ion-label>
+              PASSWORD
+            </ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+            <ion-item>
+                <ion-label>
+                  NAME
+                </ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+                <ion-item>
+                  <ion-label>
+                    ADDRESS
+                  </ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+
+  </ion-list>
+
+    <div padding>
+      <ion-button block color="primary" (click)="signup()">
+        SIGNUP
+      </ion-button>
+    </div>
+</ion-content>
